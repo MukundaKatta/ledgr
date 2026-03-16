@@ -1,0 +1,30 @@
+{
+  "name": "@ledgr/invoicing",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./generator": "./src/generator.ts",
+    "./sender": "./src/sender.ts",
+    "./tracker": "./src/tracker.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist .turbo"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.47.0",
+    "@react-pdf/renderer": "^4.1.0",
+    "@sendgrid/mail": "^8.1.0",
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@types/react": "^19.0.0",
+    "@ledgr/supabase": "*"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "@ledgr/banking",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./plaid-client": "./src/plaid-client.ts",
+    "./categorizer": "./src/categorizer.ts",
+    "./reconciler": "./src/reconciler.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist .turbo"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.47.0",
+    "plaid": "^28.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@ledgr/supabase": "*"
+  }
+}
